@@ -1,0 +1,138 @@
+<!--
+    Name: Melissa Hardwick
+    Date: 06/28/2021
+    Assignment 1: Creating and Submitting a Form
+-->
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table.table {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f0f0f0;
+            }
+            table.table tbody td {
+                font-size: 10px;
+            }
+        </style>
+        <script type="text/javascript">
+            function GetTotal()
+            {
+                var processorprice = 0;
+                var harddriveprice = 0;
+                var memoryprice = 0;
+                var networkcardprice = 0;
+                var modemprice = 0;
+                var totalprice = 0;
+                var i;
+    
+                //Get Processor Price
+                for (i = 1; i <= 3; i++) {
+                    if (document.getElementById("Processor" + i).checked) {
+                        processorprice=parseInt(document.getElementById("Processor" + i).value);
+                    }
+                }
+    
+                //Get Hard Drive Price
+                for (i = 1; i <= 3; i++) {
+                    if (document.getElementById("HardDrive" + i).checked) {
+                        harddriveprice=parseInt(document.getElementById("HardDrive" + i).value);
+                    }
+                }
+    
+                //Get Memory Price
+                i=document.getElementById("Memory").selectedIndex;
+                memoryprice=parseInt(document.getElementById("Memory")[i].value);
+    
+                //Get Network Card Price
+                if (document.getElementById("NetworkCard").checked) {
+                    networkcardprice=parseInt(document.getElementById("NetworkCard").value);
+                } else {
+                    networkcardprice=0;
+                }
+    
+                //Get Modem Price
+                if (document.getElementById("Modem").checked) {
+                    modemprice=parseInt(document.getElementById("Modem").value);
+                } else {
+                    modemprice=0;
+                }
+    
+                //Get Total Price
+                totalprice = 1000 + processorprice + harddriveprice + memoryprice + networkcardprice + modemprice;
+                document.getElementById("TotalPrice").value=totalprice;
+                
+            }
+        </script>
+        <title>Computer Pricing</title>
+    </head>
+    <body>
+        <h1>Computer Pricing</h1>
+
+        <table class="prices">
+            <tbody>
+                <tr>
+                    <td id="base-price">Base Price:</td>
+                    <td>$1,000</td>
+                </tr>
+                <form>
+                    <tr>
+                        <td class="processor-label">Processor:</td>
+                        <td class="proessor-radio">
+                            <input type="radio" id="Processor1" name="Processor" value="0" />
+                            <label for="Processor1">1.5 GHz</label><br>
+                            <input type="radio" id="Processor2" name="Processor" value=400 />
+                            <label for="Processor2">2.0 GHz</label><br>
+                            <input type="radio" id="Processor3" name="Processor" value="600" />
+                            <label for="Processor3">1.5 GHz</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="HardDrive-label">Hard Drive:</td>
+                        <td class="HardDrive-radio">
+                            <input type="radio" id="HardDrive1" name="HardDrive" value="0" />
+                            <label for="HardDrive1">40 GB</label><br>
+                            <input type="radio" id="HardDrive2" name="HardDrive" value=200 />
+                            <label for="HardDrive2">80 GB</label><br>
+                            <input type="radio" id="HardDrive3" name="HardDrive" value="400" />
+                            <label for="HardDrive3">100 GB</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Memory-Label">Memory:</td>
+                        <td id="Memory-Options">
+                            <select id="Memory">
+                                <option value="0">1024 MB</option>
+                                <option value="300">2048 MB</option>
+                                <option value="500">4096 MB</option>
+                                <option value="700">8192 MB</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="NetworkCard-Label">Network Card:</td>
+                        <td class="NetworkCard-Checkbox">
+                            <input type="checkbox" id="NetworkCard" value="70">(add $70)</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Modem-Label">Modem:</td>
+                        <td class="Modem-Checkbox">
+                            <input type="checkbox" id="Modem" value="50">(add $50)</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Total Price" onclick="GetTotal()" />
+                        </td>
+                        <td class="Total">
+                            <input type="textbox" id="TotalPrice">
+                        </td>
+                    </tr>
+                </form>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+    Name: Melissa Hardwick
+    Date: 06/30/2021
+    Purpose: Assignment 3 - Form Processing
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Form Processing Demonstrated Through User Registration</title>
+    </head>
+    <body>
+        <form action="display_user_info.php" method="POST">
+            <table>
+                <th colspan="2">Please enter user information</th>
+                <tbody>
+                    <tr>
+                        <td><label for="fname">First Name:</label></td>
+                        <td><input type="text" name="fname" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name:</label></td>
+                        <td><input type="text" name="lname" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail Address:</label></td>
+                        <td><input type="text" name="email" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tel">Telephone #:</label></td>
+                        <td><input type="text" name="tel" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td><input type="text" name="address" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City:</label></td>
+                        <td><input type="text" name="city" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State:</label></td>
+                        <td><input type="text" name="state" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="zip">Zip:</label></td>
+                        <td><input type="text" name="zip" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" name="reset" value="Reset"/></td>
+                        <td><input type="submit" name="submit" value="Submit"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+table, tbody, td {
+    border: 1px solid black;
+    width:50%;
+    padding: 5px;
+}
+.left-col {
+    text-align: left;
+    font-weight: bold;
+}
+.right-col {
+    text-align: right;
+}
+

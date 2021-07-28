@@ -1,0 +1,83 @@
+<!--
+    Name: Melissa Hardwick
+    Date: 07/10/2021
+    Purpose: Assignment 6 - Coffee house Order Form
+-->
+<DOCTYPE html />
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Coffee House - Order Form</title>
+    </head>
+    <body>
+        <h1>The Coffee House</h1>
+        <form action="order_summary.php" method="POST">
+            <table id="orderform">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: left;"> Order Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="coffee">Coffee:</label></td>
+                        <td>
+                            <select name="coffee" id="coffee">
+                                <option value="">Select Coffee:</option>
+                                <option value="Boca Vila">Boca Vila</option>
+                                <option value="South Beach Rhythm">South Beach Rhythm</option>
+                                <option value="Pumpkin Paradise">Pumpkin Paradise</option>
+                                <option value="Sumatran Sunset">Sumatran Sunset</option>
+                                <option value="Bali Batur">Bali Batur</option>
+                                <option value="Double Dark">Doulble Dark</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="type">Type:</label></td>
+                        <td>
+                            <input type="radio" id="regular" name="type" value="Regular"><label for="regular">Regular</label><br>
+                            <input type="radio" id="decaf" name="type" value="Decaffeinated"><label for="decaf">Decaffeinated</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="quantity">Quantity (in pounds):</label></td>
+                        <td><input type="text" id="quantity" name="quantity" value="" min="1" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail address:</label></td>
+                        <td><input type="text" id="email" name="email" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telephone">Telephone #:</label></td>
+                        <td><input type="text" id="telephone" name="telephone" value=""maxlength="10" size="10"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td><input type="text" id="address" name="address" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City:</label></td>
+                        <td><input type="text" id="city" name="city" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State:</label></td>
+                        <td><input type="text" id="state" name="state" value="" maxlength="2" size="2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">Zip:</label></td>
+                        <td><input type="text" id="zip" name="zip" value="" size="5" minlength="5" maxlength="5"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" name="submit" value="Submit">Submit</button></td>
+                        <td><button type="reset" name="reset" value="Reset">Reset</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
